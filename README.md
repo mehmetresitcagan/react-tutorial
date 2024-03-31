@@ -1,5 +1,12 @@
 # Getting Started with Create React App
 
+# Tutorial Links
+https://www.taniarascia.com/getting-started-with-react/
+
+https://github.com/taniarascia/react-tutorial?tab=readme-ov-file
+
+https://react.dev/learn
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

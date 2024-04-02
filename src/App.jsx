@@ -1,13 +1,12 @@
-import React, { useState } from "react";
 import Contacts from "./components/Contacts";
 
-const App = () => {
-  const [counter, setCounter] = useState(0);
+import "./App.css";
 
+const App = () => {
   return (
-    <>
+    <div className="App">
       <Contacts />
-    </>
+    </div>
   );
 };
 

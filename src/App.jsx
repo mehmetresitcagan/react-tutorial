@@ -1,16 +1,12 @@
 import React, { useState } from "react";
+import Contacts from "./components/Contacts";
 
 const App = () => {
   const [counter, setCounter] = useState(0);
 
   return (
     <>
-      <p>{counter}</p>
-      <hr />
-      <br />
-      <button onClick={() => setCounter(counter + 1)}>Increment</button>
-      <br />
-      <button onClick={() => setCounter(counter - 1)}>Decrement</button>
+      <Contacts />
     </>
   );
 };

@@ -18,7 +18,7 @@ function List({ contacts }) {
       />
       <ul className="list">
         {filtered.map((contact, index) => (
-          <li key={index}>{contact.full_name}</li>
+          <li key={index}>{contact.name}</li>
         ))}
       </ul>
     </div>

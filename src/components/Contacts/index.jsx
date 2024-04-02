@@ -4,20 +4,22 @@ import Form from "./Form";
 import "./styles.css";
 
 function Contacts() {
-  const [contacts, setContacts] = useState([
-    { full_name: "mehmet", phone_number: "123123" },
-    { full_name: "ahmet", phone_number: "456456" },
-    { full_name: "mehmet", phone_number: "456456" },
-    { full_name: "ahmet", phone_number: "123123" },
-  ]);
+  const [contacts, setContacts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    console.log(contacts);
-  }, [contacts]);
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((users) => {
+        setContacts(users);
+        setIsLoading(false);
+      });
+  }, []);
 
   return (
     <div id="container">
       <h1>Contacts</h1>
+      {isLoading && <div>Loading...</div>}
       <List contacts={contacts} />
       <Form addContacts={setContacts} contacts={contacts} />
     </div>
